@@ -17,7 +17,7 @@
 #define uuid2 @"AB8190D5-D11E-4941-ACC4-42F30510B408"
 #define uuid3 @"00000000-0000-0000-0000-000000000000"
 
-@interface TableViewController () <BeaconWaveLoadingManagerDelegate>
+@interface TableViewController () <MinewBeaconManagerDelegate>
 @end
 
 
