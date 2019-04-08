@@ -10,13 +10,7 @@
 		476B2E91223B38AE003A282C /* DisplayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E8E223B38AE003A282C /* DisplayViewController.xib */; };
 		476B2E92223B38AE003A282C /* WaveLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B2E8F223B38AE003A282C /* WaveLoadingIndicator.swift */; };
 		476B2E93223B38AE003A282C /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B2E90223B38AE003A282C /* DisplayViewController.swift */; };
-		476B2E9E223B4AF5003A282C /* AppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E98223B4AF5003A282C /* AppIcon.png */; };
-		476B2E9F223B4AF5003A282C /* SmartLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E99223B4AF5003A282C /* SmartLogo.png */; };
-		476B2EA0223B4AF5003A282C /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E9A223B4AF5003A282C /* bottom.png */; };
-		476B2EA1223B4AF5003A282C /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E9B223B4AF5003A282C /* splash.png */; };
-		476B2EA2223B4AF5003A282C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E9C223B4AF5003A282C /* logo.png */; };
-		476B2EA3223B4AF5003A282C /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 476B2E9D223B4AF5003A282C /* bg.png */; };
-		477B5DFF2240C42100BA2DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477B5DFE2240C42100BA2DFB /* Assets.xcassets */; };
+		47C8EE34225AECCA0070EA00 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 47C8EE33225AECCA0070EA00 /* bg.png */; };
 		47EAA0342248AAAE006B90C6 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EAA0192248AAAE006B90C6 /* SDWebImageManager.m */; };
 		47EAA0352248AAAE006B90C6 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EAA01A2248AAAE006B90C6 /* SDWebImageDecoder.m */; };
 		47EAA0362248AAAE006B90C6 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EAA01C2248AAAE006B90C6 /* UIImageView+HighlightedWebCache.m */; };
@@ -65,13 +59,7 @@
 		476B2E8F223B38AE003A282C /* WaveLoadingIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveLoadingIndicator.swift; sourceTree = "<group>"; };
 		476B2E90223B38AE003A282C /* DisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		476B2E95223B3A22003A282C /* BeaconWaveLoading-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BeaconWaveLoading-Bridging-Header.h"; sourceTree = "<group>"; };
-		476B2E98223B4AF5003A282C /* AppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon.png; sourceTree = "<group>"; };
-		476B2E99223B4AF5003A282C /* SmartLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SmartLogo.png; sourceTree = "<group>"; };
-		476B2E9A223B4AF5003A282C /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottom.png; sourceTree = "<group>"; };
-		476B2E9B223B4AF5003A282C /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
-		476B2E9C223B4AF5003A282C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		476B2E9D223B4AF5003A282C /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		477B5DFE2240C42100BA2DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "image file/Assets.xcassets"; sourceTree = "<group>"; };
+		47C8EE33225AECCA0070EA00 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		47EAA0172248AAAE006B90C6 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		47EAA0182248AAAE006B90C6 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		47EAA0192248AAAE006B90C6 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
@@ -162,19 +150,6 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		476B2E97223B4AF5003A282C /* image file */ = {
-			isa = PBXGroup;
-			children = (
-				476B2E98223B4AF5003A282C /* AppIcon.png */,
-				476B2E9B223B4AF5003A282C /* splash.png */,
-				476B2E99223B4AF5003A282C /* SmartLogo.png */,
-				476B2E9A223B4AF5003A282C /* bottom.png */,
-				476B2E9C223B4AF5003A282C /* logo.png */,
-				476B2E9D223B4AF5003A282C /* bg.png */,
-			);
-			path = "image file";
-			sourceTree = "<group>";
-		};
 		47EAA0162248AAAE006B90C6 /* SDWebImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				47EAA0162248AAAE006B90C6 /* SDWebImage */,
-				477B5DFE2240C42100BA2DFB /* Assets.xcassets */,
 				476B2E8D223B38AE003A282C /* Classes */,
 				E56A11421D6FECA5003808BF /* AppDelegate.h */,
 				E56A11431D6FECA5003808BF /* AppDelegate.m */,
@@ -249,9 +223,9 @@
 				E56A11801D6FECF0003808BF /* TableViewController.m */,
 				476B2E95223B3A22003A282C /* BeaconWaveLoading-Bridging-Header.h */,
 				E56A11481D6FECA5003808BF /* Main.storyboard */,
-				476B2E97223B4AF5003A282C /* image file */,
 				E56A114D1D6FECA5003808BF /* LaunchScreen.storyboard */,
 				E56A11501D6FECA5003808BF /* Info.plist */,
+				47C8EE33225AECCA0070EA00 /* bg.png */,
 				E56A113F1D6FECA5003808BF /* Supporting Files */,
 			);
 			path = BeaconWaveLoading;
@@ -368,6 +342,7 @@
 				TargetAttributes = {
 					E56A113B1D6FECA5003808BF = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6CL65L546K;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -409,15 +384,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				476B2EA3223B4AF5003A282C /* bg.png in Resources */,
-				476B2EA1223B4AF5003A282C /* splash.png in Resources */,
-				476B2E9F223B4AF5003A282C /* SmartLogo.png in Resources */,
-				476B2EA2223B4AF5003A282C /* logo.png in Resources */,
-				477B5DFF2240C42100BA2DFB /* Assets.xcassets in Resources */,
 				E56A114F1D6FECA5003808BF /* LaunchScreen.storyboard in Resources */,
-				476B2EA0223B4AF5003A282C /* bottom.png in Resources */,
 				E56A114A1D6FECA5003808BF /* Main.storyboard in Resources */,
-				476B2E9E223B4AF5003A282C /* AppIcon.png in Resources */,
+				47C8EE34225AECCA0070EA00 /* bg.png in Resources */,
 				476B2E91223B38AE003A282C /* DisplayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -631,7 +600,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6CL65L546K;
 				INFOPLIST_FILE = BeaconWaveLoading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -657,7 +626,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6CL65L546K;
 				INFOPLIST_FILE = BeaconWaveLoading/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

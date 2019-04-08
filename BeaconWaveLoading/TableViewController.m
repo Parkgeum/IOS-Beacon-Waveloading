@@ -1,9 +1,9 @@
 //
 //  TableViewController.m
-//  YlwlBeaconDemo
+//  BeaconWaveLoading
 //
 //  Created by ParkGeum on 2019. 3. 25..
-//  Copyright © 2016年 com.YLWL. All rights reserved.
+//  Copyright © 2019년 ParkGeum. All rights reserved.
 //
 
 #import "BeaconWaveLoading-Bridging-Header.h"
@@ -34,14 +34,10 @@
 //    
 //     [m scan];
     
+    _TempTextView.userInteractionEnabled = NO;
+    _SensorTextView.userInteractionEnabled = NO;
+    _HumTextView.userInteractionEnabled = NO;
     
-    //logo
-    UIView *logo = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
-    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage     imageNamed:@"SmartLogo.png"]];
-    [image setFrame:CGRectMake(10, 8, 165, 34)];
-    [logo addSubview:image];
-    [self.navigationController.navigationBar addSubview:logo];
-     
     //background image
     UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg"]];
     [tempImageView setFrame:self.tableView.frame];
@@ -105,6 +101,24 @@
 }
 
 
+- (IBAction)SwitchButton:(UISwitch *)sender
+{
+    if (sender.isOn)
+    {
+        _dm.delegate = self;
+        
+        // open backgroundSupport will reduce the battery life.
+        [_dm startScan:@[uuid3] backgroundSupport:NO];
+    }
+    else
+    {
+        [[MinewBeaconManager sharedInstance] stopScan];
+        _scannedDevice = nil;
+        //[self.tableView reloadData];
+    }
+    
+}
+
 #pragma mark *****************************TableView Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -125,24 +139,24 @@
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.font = [UIFont boldSystemFontOfSize:17.0];
     cell.textLabel.textColor = UIColor.darkGrayColor;
-    cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:25.0];
+    cell.detailTextLabel.font = [UIFont boldSystemFontOfSize:23.0];
     cell.detailTextLabel.textColor = UIColor.darkGrayColor;
     
     MinewBeacon *device = _scannedDevice[indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"스마트온습도센서    Mac:%@\n",[device getBeaconValue:BeaconValueIndex_Mac].stringValue];
+    cell.textLabel.text = [NSString stringWithFormat:@"스마트온습도센서            Mac:%@\n",[device getBeaconValue:BeaconValueIndex_Mac].stringValue];
     cell.detailTextLabel.numberOfLines = 0;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"온도:%.2f°C, 습도:%.2f%%",[device getBeaconValue:BeaconValueIndex_Temperature].floatValue, [device getBeaconValue:BeaconValueIndex_Humidity].floatValue];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"온도 : %.2f°C     습도 : %.2f%%",[device getBeaconValue:BeaconValueIndex_Temperature].floatValue, [device getBeaconValue:BeaconValueIndex_Humidity].floatValue];
     
     
     if (_SelectDevice==NULL) {
-        self.SensorTextView.text = [NSString stringWithFormat:@"센서ID:%@",[device getBeaconValue:BeaconValueIndex_Mac].stringValue];
-        self.TempTextView.text = [NSString stringWithFormat:@"온도:%.2f°C",[device getBeaconValue:BeaconValueIndex_Temperature].floatValue];
-        self.HumTextView.text = [NSString stringWithFormat:@"습도:%.2f%%",[device getBeaconValue:BeaconValueIndex_Humidity].floatValue];
+        self.SensorTextView.text = [NSString stringWithFormat:@"센서ID : %@",[device getBeaconValue:BeaconValueIndex_Mac].stringValue];
+        self.TempTextView.text = [NSString stringWithFormat:@"온도 : %.2f°C",[device getBeaconValue:BeaconValueIndex_Temperature].floatValue];
+        self.HumTextView.text = [NSString stringWithFormat:@"습도 : %.2f%%",[device getBeaconValue:BeaconValueIndex_Humidity].floatValue];
     }
     else {
-        self.SensorTextView.text = [NSString stringWithFormat:@"센서ID:%@",[_SelectDevice getBeaconValue:BeaconValueIndex_Mac].stringValue];
-        self.TempTextView.text = [NSString stringWithFormat:@"온도:%.2f°C",[_SelectDevice getBeaconValue:BeaconValueIndex_Temperature].floatValue];
-        self.HumTextView.text = [NSString stringWithFormat:@"습도:%.2f%%",[_SelectDevice getBeaconValue:BeaconValueIndex_Humidity].floatValue];
+        self.SensorTextView.text = [NSString stringWithFormat:@"센서ID : %@",[_SelectDevice getBeaconValue:BeaconValueIndex_Mac].stringValue];
+        self.TempTextView.text = [NSString stringWithFormat:@"온도 : %.2f°C",[_SelectDevice getBeaconValue:BeaconValueIndex_Temperature].floatValue];
+        self.HumTextView.text = [NSString stringWithFormat:@"습도 : %.2f%%",[_SelectDevice getBeaconValue:BeaconValueIndex_Humidity].floatValue];
     }
     
     return cell;
@@ -151,14 +165,12 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     _SelectDevice = _scannedDevice[indexPath.row];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 100.f;
+    return 65.f;
 }
 
 #pragma mark **********************************Device Manager Delegate

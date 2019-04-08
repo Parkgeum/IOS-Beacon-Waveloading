@@ -1,9 +1,9 @@
 //
 //  TableViewController.h
-//  YlwlBeaconDemo
+//  BeaconWaveLoading
 //
 //  Created by ParkGeum on 2019. 3. 25..
-//  Copyright © 2016年 com.YLWL. All rights reserved.
+//  Copyright © 2019년 ParkGeum. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
